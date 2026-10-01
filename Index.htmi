@@ -1,265 +1,337 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>WE-Mobilize | Mobilität neu denken</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-line-height:1.6;
-color:#333;
-background:#f5f5f5;
-}
-
-header{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1350&q=80');
-background-size:cover;
-background-position:center;
-height:90vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero h1{
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:1.5rem;
-margin-bottom:30px;
-}
-
-.btn{
-background:#00a651;
-color:white;
-padding:15px 30px;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
-}
-
-section{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-font-size:2.2rem;
-color:#003366;
-}
-
-.leistungen{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-text-align:center;
-}
-
-.card h3{
-margin-bottom:15px;
-color:#003366;
-}
-
-.about{
-background:white;
-border-radius:10px;
-padding:40px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.kontakt{
-background:#003366;
-color:white;
-text-align:center;
-padding:60px 20px;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
+background:#f5f7fa;
+color:#222;
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:white;
-padding:15px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-z-index:1000;
+background:#002f5f;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#4bd137;
 }
 
 nav ul{
 display:flex;
-justify-content:center;
 list-style:none;
-gap:30px;
+gap:25px;
 }
 
 nav a{
 text-decoration:none;
-color:#003366;
+color:white;
 font-weight:bold;
 }
 
-@media(max-width:768px){
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,30,60,.75),rgba(0,30,60,.75)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+color:white;
+}
+
+.hero-content{
+max-width:700px;
+}
+
 .hero h1{
-font-size:2.5rem;
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#4bd137;
 }
 
 .hero p{
-font-size:1.1rem;
+font-size:22px;
+line-height:1.6;
+margin-bottom:30px;
+}
+
+.btn{
+background:#4bd137;
+padding:15px 35px;
+border-radius:5px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:#002f5f;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:#002f5f;
+margin-bottom:15px;
+}
+
+.about{
+background:white;
+border-radius:15px;
+padding:40px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.brands{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.brand{
+background:white;
+padding:30px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#002f5f;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.contact{
+background:#002f5f;
+color:white;
+text-align:center;
+border-radius:15px;
+padding:50px;
+}
+
+.contact p{
+margin:15px 0;
+font-size:20px;
+}
+
+footer{
+background:#001c38;
+padding:25px;
+text-align:center;
+color:white;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
 }
 
 nav ul{
-flex-wrap:wrap;
+display:none;
 }
+
+.brands{
+grid-template-columns:repeat(2,1fr);
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <nav>
+
+<div class="logo">WE-Mobilize</div>
+
 <ul>
-<li>#homeStartseite</a></li>
-<li>#aboutÜber uns</a></li>
+<li>#aboutÜber Uns</a></li>
 <li>#leistungenLeistungen</a></li>
+<li>#markenMarken</a></li>
 <li>#kontaktKontakt</a></li>
 </ul>
+
 </nav>
 
-<header id="home">
-<div class="hero">
-<h1>WE-Mobilize</h1>
-<p>Mobilität. Innovation. Zukunft.</p>
+<section class="hero">
+
+<div class="hero-content">
+
+<p style="color:#4bd137;font-weight:bold;">
+IN DER GRÜNDUNGSPHASE · SACHSEN
+</p>
+
+<h1>
+Mobilität neu denken.
+<span>Zukunft gemeinsam bewegen.</span>
+</h1>
+
+<p>
+WE-Mobilize entwickelt moderne Mobilitätslösungen für Privat- und Geschäftskunden.
+Von Fahrzeugverkauf über Werkstatt-Service bis hin zu Elektromobilität und Finanzierung.
+</p>
+
 #kontaktKontakt aufnehmen</a>
+
 </div>
-</header>
+
+</section>
 
 <section id="about">
-<h2>Über uns</h2>
+
+<h2 class="section-title">Über WE-Mobilize</h2>
+
 <div class="about">
+
 <p>
-WE-Mobilize entwickelt moderne und nachhaltige Mobilitätslösungen
-für Unternehmen, Kommunen und Privatkunden.
 
-Unser Fokus liegt auf Elektromobilität, intelligenter Fahrzeugnutzung,
-Flottenmanagement und zukunftsorientierten Mobilitätskonzepten.
+WE-Mobilize befindet sich aktuell in der Gründungsphase und verfolgt das Ziel,
+ein modernes Autohaus- und Mobilitätszentrum in Sachsen aufzubauen.
 
-Wir verbinden Innovation, Nachhaltigkeit und Wirtschaftlichkeit
-zu individuellen Lösungen für die Mobilität von morgen.
+Unser Fokus liegt auf persönlicher Beratung, hochwertigen Fahrzeugen,
+erstklassigem Service sowie nachhaltigen Mobilitätslösungen.
+
+Wir stehen für Zuverlässigkeit, Transparenz und langfristige Kundenbeziehungen.
+
 </p>
+
 </div>
+
 </section>
 
 <section id="leistungen">
-<h2>Unsere Leistungen</h2>
 
-<div class="leistungen">
+<h2 class="section-title">Unsere Leistungen</h2>
 
-<div class="card">
-<h3>Elektromobilität</h3>
-<p>Beratung und Umsetzung moderner E-Mobilitätslösungen.</p>
-</div>
+<div class="grid">
 
 <div class="card">
-<h3>Ladeinfrastruktur</h3>
-<p>Planung und Integration von Wallboxen und Ladesystemen.</p>
+<h3>🚗 Fahrzeugverkauf</h3>
+<p>Neu- und Gebrauchtwagen verschiedener Marken.</p>
 </div>
 
 <div class="card">
-<h3>Flottenmanagement</h3>
-<p>Effiziente Verwaltung und Optimierung von Fahrzeugflotten.</p>
+<h3>🔧 Werkstatt & Service</h3>
+<p>Inspektion, Wartung und Reparaturen.</p>
 </div>
 
 <div class="card">
-<h3>Fahrzeughandel</h3>
-<p>Individuelle Fahrzeuglösungen für Unternehmen und Privatkunden.</p>
+<h3>🛡 Garantie</h3>
+<p>Mobilitäts- und Garantiepakete für mehr Sicherheit.</p>
 </div>
 
 <div class="card">
-<h3>Mobilitätsberatung</h3>
-<p>Strategische Konzepte für nachhaltige Mobilität.</p>
+<h3>💳 Finanzierung & Leasing</h3>
+<p>Individuelle Lösungen für Privat- und Geschäftskunden.</p>
 </div>
 
 <div class="card">
-<h3>Digitale Lösungen</h3>
-<p>Digitale Prozesse für moderne Mobilitätsangebote.</p>
+<h3>⚡ Elektromobilität</h3>
+<p>Moderne Elektrofahrzeuge und Ladeinfrastruktur.</p>
+</div>
+
+<div class="card">
+<h3>🔄 Fahrzeugankauf</h3>
+<p>Faire und unkomplizierte Fahrzeugbewertung.</p>
 </div>
 
 </div>
+
 </section>
 
-<section>
-<h2>Warum WE-Mobilize?</h2>
+<section id="marken">
 
-<div class="leistungen">
+<h2 class="section-title">Unsere Marken</h2>
 
-<div class="card">
-<h3>Innovation</h3>
-<p>Moderne Technologien und zukunftssichere Konzepte.</p>
-</div>
+<div class="brands">
 
-<div class="card">
-<h3>Nachhaltigkeit</h3>
-<p>Umweltfreundliche und wirtschaftliche Mobilitätslösungen.</p>
-</div>
+<div class="brand">GEELY</div>
 
-<div class="card">
-<h3>Partnerschaft</h3>
-<p>Persönliche Beratung und langfristige Zusammenarbeit.</p>
-</div>
+<div class="brand">HYUNDAI</div>
+
+<div class="brand">FORD</div>
+
+<div class="brand">MG</div>
 
 </div>
+
 </section>
 
-<section id="kontakt" class="kontakt">
+<section id="kontakt">
+
+<div class="contact">
+
 <h2>Kontakt</h2>
 
-<p><strong>WE-Mobilize</strong></p>
-<p>Dresden | Sachsen</p>
+<p>📞 0176 87825290</p>
 
-<br>
+<p>📧 javadmehrpooyan7@gmail.com</p>
 
-<p>📧 info@we-mobilize.de</p>
-<p>📞 +49 (0) 000 000000</p>
+<p>📍 Sachsen, Deutschland</p>
 
-<br>
+<p>
+WE‑Mobilize befindet sich aktuell in der Gründungsphase.
+Wir freuen uns auf Ihre Anfrage.
+</p>
 
-<p>Wir freuen uns auf Ihre Anfrage.</p>
+</div>
+
 </section>
 
 <footer>
-<p>© 2026 WE-Mobilize | Alle Rechte vorbehalten</p>
+
+© 2026 WE‑Mobilize | Mobilität neu denken.
+
 </footer>
 
 </body>
 </html>
-
